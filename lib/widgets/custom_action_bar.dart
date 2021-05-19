@@ -79,10 +79,10 @@ class CustomActionBar extends StatelessWidget {
               ));
             },
             child: Container(
-              width: 42.0,
               height: 42.0,
+              padding: EdgeInsets.only(left: 10,right: 10),
               decoration: BoxDecoration(
-                color: Colors.black,
+                color: Color(0xFFE11584),
                 borderRadius: BorderRadius.circular(8.0),
               ),
               alignment: Alignment.center,
@@ -95,7 +95,24 @@ class CustomActionBar extends StatelessWidget {
                     List _documents = snapshot.data.docs;
                     _totalItems = _documents.length;
                   }
+                  return RichText(
+                    text: TextSpan(
+                      children: [
 
+                        WidgetSpan(
+                          child: Icon(Icons.shopping_cart, size: 18.0,color: Colors.white,),
+                        ),
+                        TextSpan(
+                          text:  ": $_totalItems" ?? ": 0",
+                          style: TextStyle(
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                  );
                   return Text(
                     "$_totalItems" ?? "0",
                     style: TextStyle(

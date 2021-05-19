@@ -16,6 +16,30 @@ class ProductPage extends StatefulWidget {
 class _ProductPageState extends State<ProductPage> {
   FirebaseServices _firebaseServices = FirebaseServices();
   String _selectedProductSize = "0";
+  bool _saved=false;
+  int i=0;
+
+
+  void _checkSaved()  {
+
+    if(i==0){
+      _firebaseServices.usersRef.doc(_firebaseServices.getUserId()).collection("Saved").doc(widget.productId).get().then((doc){
+        if(doc.exists){
+          setState(() {
+            _saved=true;
+          });
+
+        }
+        else{
+          setState(() {
+            _saved=false;
+          });
+
+        }
+      });
+      i=1;
+    }}
+
 
   Future _addToCart() {
     return _firebaseServices.usersRef
@@ -32,10 +56,17 @@ class _ProductPageState extends State<ProductPage> {
         .doc(widget.productId)
         .set({"size": _selectedProductSize});
   }
+  Future _deleteFromSaved() {
+    return _firebaseServices.usersRef
+        .doc(_firebaseServices.getUserId())
+        .collection("Saved")
+        .doc(widget.productId)
+        .delete();
+  }
 
   final SnackBar _snackBar = SnackBar(content: Text("Product added to the cart"),);
   final SnackBar _snackBar1 = SnackBar(content: Text("Product added to the saved"),);
-
+  final SnackBar _snackBar2 = SnackBar(content: Text("Product removed from the saved"),);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,7 +82,7 @@ class _ProductPageState extends State<ProductPage> {
                   ),
                 );
               }
-
+              _checkSaved();
               if (snapshot.connectionState == ConnectionState.done) {
                 // Firebase Document Data Map
                 Map<String, dynamic> documentData = snapshot.data.data();
@@ -87,7 +118,7 @@ class _ProductPageState extends State<ProductPage> {
                         horizontal: 24.0,
                       ),
                       child: Text(
-                        "₹${documentData['price']}",
+                        "\$${documentData['price']}",
                         style: TextStyle(
                           fontSize: 18.0,
                           color: Theme.of(context).accentColor,
@@ -130,22 +161,37 @@ class _ProductPageState extends State<ProductPage> {
                         children: [
                           GestureDetector(
                             onTap: () async {
-                              await _addToSaved();
-                              Scaffold.of(context).showSnackBar(_snackBar1);
+                              if(!_saved){
+                                await _addToSaved();
+                                Scaffold.of(context).showSnackBar(_snackBar1);
+                                setState(() {
+                                  _saved=true;
+                                });
+                              }
+                              else{
+                                await _deleteFromSaved();
+                                Scaffold.of(context).showSnackBar(_snackBar2);
+                                setState(() {
+                                  _saved=false;
+                                });
+                              }
                             },
                             child: Container(
                               width: 65.0,
                               height: 65.0,
                               decoration: BoxDecoration(
-                                color: Color(0xFFDCDCDC),
-                                borderRadius: BorderRadius.circular(12.0),
+                                  color: Color(0xFFDCDCDC),
+                                  borderRadius: BorderRadius.circular(12.0),
+                                  border: Border.all(color: _saved  ? Theme.of(context).accentColor : Colors.black,width:4)
                               ),
                               alignment: Alignment.center,
                               child: Image(
                                 image: AssetImage(
                                   "assets/images/tab_saved.png",
                                 ),
+                                color:  _saved? Theme.of(context).accentColor : Colors.black,
                                 height: 22.0,
+
                               ),
                             ),
                           ),
