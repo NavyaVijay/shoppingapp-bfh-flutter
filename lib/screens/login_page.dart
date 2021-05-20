@@ -109,7 +109,22 @@ class _LoginPageState extends State<LoginPage> {
                   top: 24.0,
                 ),
                 child: Text(
-                  "Welcome User,\nLogin to your account",
+                  "SHOPIFY.com",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Color(0xFFE11584),
+                      fontSize: 40.0,
+                      fontWeight: FontWeight.w600),
+
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.only(
+                  top: 0.0,
+                  bottom: 0.0,
+                ),
+                child: Text(
+                  "Login to your account",
                   textAlign: TextAlign.center,
                   style: Constants.boldHeading,
                 ),
@@ -117,7 +132,7 @@ class _LoginPageState extends State<LoginPage> {
               Column(
                 children: [
                   CustomInput(
-                    hintText: "Email...",
+                    hintText: "Email",
                     onChanged: (value) {
                       _loginEmail = value;
                     },
@@ -127,7 +142,7 @@ class _LoginPageState extends State<LoginPage> {
                     textInputAction: TextInputAction.next,
                   ),
                   CustomInput(
-                    hintText: "Password...",
+                    hintText: "Password",
                     onChanged: (value) {
                       _loginPassword = value;
                     },

@@ -73,17 +73,20 @@ class CustomActionBar extends StatelessWidget {
               style: Constants.boldHeading,
             ),
           GestureDetector(
+
             onTap: () {
               Navigator.push(context, MaterialPageRoute(
                 builder: (context) => CartPage(),
               ));
             },
+
             child: Container(
               height: 42.0,
+
               padding: EdgeInsets.only(left: 10,right: 10),
               decoration: BoxDecoration(
                 color: Color(0xFFE11584),
-                borderRadius: BorderRadius.circular(8.0),
+                borderRadius: BorderRadius.only(topRight:Radius.circular(5.0),topLeft: Radius.circular(5.0),bottomRight: Radius.circular(20.0),bottomLeft: Radius.circular(20.0)),
               ),
               alignment: Alignment.center,
               child: StreamBuilder(
@@ -103,7 +106,7 @@ class CustomActionBar extends StatelessWidget {
                           child: Icon(Icons.shopping_cart, size: 18.0,color: Colors.white,),
                         ),
                         TextSpan(
-                          text:  ": $_totalItems" ?? ": 0",
+                          text:  " $_totalItems" ?? " 0",
                           style: TextStyle(
                             fontSize: 18.0,
                             fontWeight: FontWeight.w600,

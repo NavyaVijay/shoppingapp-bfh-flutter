@@ -23,7 +23,7 @@ class CustomBtn extends StatelessWidget {
             width: 2.0,
           ),
           borderRadius: BorderRadius.circular(
-            12.0,
+            50.0,
           ),
         ),
         margin: EdgeInsets.symmetric(

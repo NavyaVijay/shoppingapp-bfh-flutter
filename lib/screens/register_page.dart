@@ -120,7 +120,7 @@ class _RegisterPageState extends State<RegisterPage> {
               Column(
                 children: [
                   CustomInput(
-                    hintText: "Email...",
+                    hintText: "Email",
                     onChanged: (value) {
                       _registerEmail = value;
                     },
@@ -130,7 +130,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     textInputAction: TextInputAction.next,
                   ),
                   CustomInput(
-                    hintText: "Password...",
+                    hintText: "Password",
                     onChanged: (value) {
                       _registerPassword = value;
                     },

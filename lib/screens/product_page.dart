@@ -17,9 +17,28 @@ class _ProductPageState extends State<ProductPage> {
   FirebaseServices _firebaseServices = FirebaseServices();
   String _selectedProductSize = "0";
   bool _saved=false;
+  bool _incart=false;
   int i=0;
+  int j=0;
+  void _checkCart(){
+    if(j==0){
+      _firebaseServices.usersRef.doc(_firebaseServices.getUserId()).collection("Cart").doc(widget.productId).get().then((doc){
+        if(doc.exists){
+          setState(() {
+            _incart=true;
+          });
 
+        }
+        else{
+          setState(() {
+            _incart=false;
+          });
 
+        }
+      });
+      j=1;
+    }
+  }
   void _checkSaved()  {
 
     if(i==0){
@@ -63,10 +82,18 @@ class _ProductPageState extends State<ProductPage> {
         .doc(widget.productId)
         .delete();
   }
+  Future _deleteFromCart() {
+    return _firebaseServices.usersRef
+        .doc(_firebaseServices.getUserId())
+        .collection("Cart")
+        .doc(widget.productId)
+        .delete();
+  }
 
   final SnackBar _snackBar = SnackBar(content: Text("Product added to the cart"),);
   final SnackBar _snackBar1 = SnackBar(content: Text("Product added to the saved"),);
   final SnackBar _snackBar2 = SnackBar(content: Text("Product removed from the saved"),);
+  final SnackBar _snackBar3 = SnackBar(content: Text("Product removed from the cart"),);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -83,6 +110,7 @@ class _ProductPageState extends State<ProductPage> {
                 );
               }
               _checkSaved();
+              _checkCart();
               if (snapshot.connectionState == ConnectionState.done) {
                 // Firebase Document Data Map
                 Map<String, dynamic> documentData = snapshot.data.data();
@@ -118,7 +146,7 @@ class _ProductPageState extends State<ProductPage> {
                         horizontal: 24.0,
                       ),
                       child: Text(
-                        "\$${documentData['price']}",
+                        "₹${documentData['price']}",
                         style: TextStyle(
                           fontSize: 18.0,
                           color: Theme.of(context).accentColor,
@@ -177,19 +205,19 @@ class _ProductPageState extends State<ProductPage> {
                               }
                             },
                             child: Container(
-                              width: 65.0,
-                              height: 65.0,
+                              width: 55.0,
+                              height: 55.0,
                               decoration: BoxDecoration(
                                   color: Color(0xFFDCDCDC),
-                                  borderRadius: BorderRadius.circular(12.0),
-                                  border: Border.all(color: _saved  ? Theme.of(context).accentColor : Colors.black,width:4)
+                                  borderRadius: BorderRadius.circular(15.0),
+                                  border: Border.all(color:Colors.black,width:1)
                               ),
                               alignment: Alignment.center,
                               child: Image(
                                 image: AssetImage(
-                                  "assets/images/tab_saved.png",
+                                  _saved?"assets/images/bookmark.png":"assets/images/tab_saved.png",
                                 ),
-                                color:  _saved? Theme.of(context).accentColor : Colors.black,
+                            // color:  _saved? Theme.of(context).accentColor:Theme.of(context).accentColor ,
                                 height: 22.0,
 
                               ),
@@ -198,21 +226,34 @@ class _ProductPageState extends State<ProductPage> {
                           Expanded(
                             child: GestureDetector(
                               onTap: () async {
-                                await _addToCart();
-                                Scaffold.of(context).showSnackBar(_snackBar);
+
+                                if(!_incart){
+                                  await _addToCart();
+                                  Scaffold.of(context).showSnackBar(_snackBar);
+                                  setState(() {
+                                    _incart=true;
+                                  });
+                                }
+                                else{
+                                  await _deleteFromCart();
+                                  Scaffold.of(context).showSnackBar(_snackBar3);
+                                  setState(() {
+                                    _incart=false;
+                                  });
+                                }
                               },
                               child: Container(
-                                height: 65.0,
+                                height: 55.0,
                                 margin: EdgeInsets.only(
                                   left: 16.0,
                                 ),
                                 decoration: BoxDecoration(
                                   color: Colors.black,
-                                  borderRadius: BorderRadius.circular(12.0),
+                                  borderRadius: BorderRadius.circular(25.0),
                                 ),
                                 alignment: Alignment.center,
                                 child: Text(
-                                  "Add To Cart",
+                                  _incart?"Remove From Cart":"Add To Cart",
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 16.0,
