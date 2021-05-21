@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:shoppingapp/screens/login_page.dart';
 
 class BottomTabs extends StatefulWidget {
   final int selectedTab;
@@ -62,6 +63,11 @@ class _BottomTabsState extends State<BottomTabs> {
             selected: _selectedTab == 3 ? true : false,
             onPressed: () {
               FirebaseAuth.instance.signOut();
+             // LoginPage();
+            /*  Navigator.push(context, MaterialPageRoute(
+                builder: (context) => LoginPage(),
+              ));*/
+
             },
           )
         ],
