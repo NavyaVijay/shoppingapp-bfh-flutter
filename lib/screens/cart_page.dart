@@ -61,7 +61,8 @@ class _CartPageState extends State<CartPage> {
                     fontWeight:
                     FontWeight.w600),),
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(
+                  Navigator.pop(context);
+                  Navigator.pushReplacement(context, MaterialPageRoute(
                     builder: (context) => OrderPage(),
                   ));
                 },
@@ -221,6 +222,7 @@ class _CartPageState extends State<CartPage> {
               shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(25)),
               onPressed: (){
                 _addToOrder();
+
                 _showcontent();
 
                 /* Navigator.push(context, MaterialPageRoute(

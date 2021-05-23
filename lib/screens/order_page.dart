@@ -168,20 +168,8 @@ class _OrderPageState extends State<OrderPage> {
               shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(25)),
               onPressed: (){
 
-                Navigator.push(context, MaterialPageRoute(
-                  builder: (context) => HomePage(),
-                ));
-                //Scaffold.of(context).showSnackBar(new SnackBar(content: new Text("Order Placed")));
-               /* MaterialApp(
-                  debugShowCheckedModeBanner: false,
-                  theme: ThemeData(
-                      textTheme: GoogleFonts.poppinsTextTheme(
-                        Theme.of(context).textTheme,
-                      ),
-                      accentColor: Color(0xFFE11584)
-                  ),
-                  home: LandingPage(),
-                );*/
+                Navigator.pop(context);
+
               },
 
               child: const Text('Continue Shopping',style: TextStyle(fontSize: 20)),
