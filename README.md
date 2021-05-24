@@ -30,7 +30,7 @@ Search products by their color or type in the Search tab.
 Saved tab shows all the saved products.
 Logout by tapping logout icon.
 
-##Embed video of project demo
+## Embed video of project demo
 https://www.loom.com/embed/a1958eee46964c0cab076e68f793c256
 
 ## Libraries used
