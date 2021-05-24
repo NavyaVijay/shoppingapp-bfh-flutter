@@ -22,7 +22,7 @@ It provides an amazing user interface to the user. It also provides various func
 BFH/recwSrkMmJdS9y66k/2021
 
 ## Link to product walkthrough
-https://www.loom.com/share/d4878a040b9a477bac2c0d74a89e2b2a
+https://www.loom.com/share/71cda38e55db47d5bea815b2fbcc0f61
 
 ## How it Works ?
 1. If new user, create new account by providing emailid and password else login using the registered emailid and password.
@@ -32,11 +32,10 @@ https://www.loom.com/share/d4878a040b9a477bac2c0d74a89e2b2a
 5. Saved tab shows all the saved products.
 6. Logout by tapping logout icon.
 
-<a href="https://www.loom.com/share/a1958eee46964c0cab076e68f793c256">
-    <p>Shopping App - Demo Video</p>
-    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/a1958eee46964c0cab076e68f793c256-with-play.gif">
+<a href="https://www.loom.com/share/71cda38e55db47d5bea815b2fbcc0f61">
+    <p>SHOPIFY.com Demo Video</p>
+    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/71cda38e55db47d5bea815b2fbcc0f61-with-play.gif">
   </a>
-
 
 
 ## Libraries used
