@@ -12,15 +12,11 @@ It provides an amazing user interface to the user. It also provides various func
 
 ## Team members
 1. Navya 
-
-<a href="https://www.loom.com/share/a1958eee46964c0cab076e68f793c256">Github Profile </a>
-2. Prathiba M [https://github.com/prathiba7]
-<div class="github-card" data-github="prathiba7" data-width="400" data-height="" data-theme="default"></div>
-<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-
-3. Amrutha V P [https://github.com/Amruthadasvp]
-<div class="github-card" data-github="Amruthadasvp" data-width="400" data-height="150" data-theme="default"></div>
-<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+<a href="https://github.com/NavyaVijay">Github Profile</a>
+2. Prathiba M 
+<a href="https://github.com/prathiba7">Github Profile</a>
+3. Amrutha V P 
+<a href="https://github.com/Amruthadasvp">Github Profile </a>
 
 ## Team Id
 BFH/recwSrkMmJdS9y66k/2021
