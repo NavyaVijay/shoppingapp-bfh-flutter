@@ -12,9 +12,7 @@ It provides an amazing user interface to the user. It also provides various func
 
 ## Team members
 1. Navya [https://github.com/NavyaVijay]
-<div class="github-card" data-github="NavyaVijay" data-width="400" data-height="150" data-theme="default"></div>
-<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-
+<iframe width="50%" height="400px" src="https://github.com/NavyaVijay" style="-webkit-transform:scale(0.5);-moz-transform-scale(0.5);"></iframes>
 2. Prathiba M [https://github.com/prathiba7]
 <div class="github-card" data-github="prathiba7" data-width="400" data-height="" data-theme="default"></div>
 <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
