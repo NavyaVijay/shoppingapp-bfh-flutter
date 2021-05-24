@@ -31,6 +31,7 @@ Saved tab shows all the saved products.
 Logout by tapping logout icon.
 
 2. Embed video of project demo
+
 https://www.loom.com/embed/a1958eee46964c0cab076e68f793c256
 
 ## Libraries used
