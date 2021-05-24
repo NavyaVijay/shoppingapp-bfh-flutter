@@ -12,8 +12,8 @@ It provides an amazing user interface to the user. It also provides various func
 
 ## Team members
 1. Navya [https://github.com/NavyaVijay]
-2. Prathiba M [Embed perosnal github URL]
-3. Amrutha V P [Embed perosnal github URL]
+2. Prathiba M [https://github.com/prathiba7]
+3. Amrutha V P [https://github.com/Amruthadasvp]
 
 ## Team Id
 BFH/recwSrkMmJdS9y66k/2021
