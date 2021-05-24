@@ -11,11 +11,7 @@ It provides an amazing user interface to the user. It also provides various func
 6. Allows user to search products based on color or type
 
 ## Team members
-1. Navya [https://github.com/NavyaVijay]
-
-<a href="https://www.loom.com/share/a1958eee46964c0cab076e68f793c256">
-    Github Profile 
-  </a>
+1. Navya <a href="https://www.loom.com/share/a1958eee46964c0cab076e68f793c256"> Github Profile </a>
 2. Prathiba M [https://github.com/prathiba7]
 <div class="github-card" data-github="prathiba7" data-width="400" data-height="" data-theme="default"></div>
 <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
