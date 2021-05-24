@@ -30,16 +30,15 @@ Search products by their color or type in the Search tab.
 Saved tab shows all the saved products.
 Logout by tapping logout icon.
 
-2. Embed video of project demo
-
+##Embed video of project demo
 https://www.loom.com/embed/a1958eee46964c0cab076e68f793c256
 
 ## Libraries used
- cupertino_icons: 0.1.3
- firebase_core: 0.5.0
- firebase_auth: 0.18.0+1
- cloud_firestore: 0.14.0+2
- google_fonts: 1.1.0
+ 1. cupertino_icons: 0.1.3
+ 2. firebase_core: 0.5.0
+ 3. firebase_auth: 0.18.0+1
+ 4. cloud_firestore: 0.14.0+2
+ 5. google_fonts: 1.1.0
 
 ## How to configure
 1. Download and open Code
