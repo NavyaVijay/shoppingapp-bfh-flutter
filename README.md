@@ -28,8 +28,8 @@ https://www.loom.com/share/d4878a040b9a477bac2c0d74a89e2b2a
 4. Search products by their color or type in the Search tab.
 5. Saved tab shows all the saved products.
 6. Logout by tapping logout icon.
+[![Project Demo]](https://www.loom.com/embed/a1958eee46964c0cab076e68f793c256)
 
-<iframe width="640" height="360" src="https://www.loom.com/embed/a1958eee46964c0cab076e68f793c256" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ## Libraries used
 1. cupertino_icons: 0.1.3
