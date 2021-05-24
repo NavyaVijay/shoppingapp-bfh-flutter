@@ -19,7 +19,7 @@ It provides an amazing user interface to the user. It also provides various func
 BFH/recwSrkMmJdS9y66k/2021
 
 ## Link to product walkthrough
-[https://www.loom.com/share/d4878a040b9a477bac2c0d74a89e2b2a]
+https://www.loom.com/share/d4878a040b9a477bac2c0d74a89e2b2a
 
 ## How it Works ?
 1. Explaining the working of project
@@ -31,7 +31,7 @@ Saved tab shows all the saved products.
 Logout by tapping logout icon.
 
 2. Embed video of project demo
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/a1958eee46964c0cab076e68f793c256" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+https://www.loom.com/embed/a1958eee46964c0cab076e68f793c256
 
 ## Libraries used
  cupertino_icons: 0.1.3
