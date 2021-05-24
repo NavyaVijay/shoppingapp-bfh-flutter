@@ -1,6 +1,5 @@
 ![BFH Banner](https://trello-attachments.s3.amazonaws.com/542e9c6316504d5797afbfb9/542e9c6316504d5797afbfc1/39dee8d993841943b5723510ce663233/Frame_19.png)
-# Project Name
-SHOPIFY.com
+# SHOPIFY.com
 SHOPIFY.com is a simple user-friendly fashion app that allows user to purchase all types of dresses that the merchant added.
 It provides an amazing user interface to the user. It also provides various functionalities:
 1. Authentication using firebase
