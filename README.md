@@ -23,11 +23,17 @@ https://www.loom.com/share/d4878a040b9a477bac2c0d74a89e2b2a
 
 ## How it Works ?
 1. Explaining the working of project
+
 If new user, create new account by providing emailid and password else login using the registered emailid and password.
+
 Select any products, you can add to saved/cart.
+
 From cart place order, pop up with order successful message and total will be shown.
+
 Search products by their color or type in the Search tab.
+
 Saved tab shows all the saved products.
+
 Logout by tapping logout icon.
 
 ## Embed video of project demo
@@ -35,15 +41,16 @@ Logout by tapping logout icon.
 https://www.loom.com/embed/a1958eee46964c0cab076e68f793c256
 
 ## Libraries used
- 1. cupertino_icons: 0.1.3
- 2. firebase_core: 0.5.0
- 3. firebase_auth: 0.18.0+1
- 4. cloud_firestore: 0.14.0+2
- 5. google_fonts: 1.1.0
+1. cupertino_icons: 0.1.3
+2. firebase_core: 0.5.0
+3. firebase_auth: 0.18.0+1
+4. cloud_firestore: 0.14.0+2
+5. google_fonts: 1.1.0
 
 ## How to configure
 1. Download and open Code
 2. Add flutter sdk path
+
 Now app is configured!!
 
 ## How to Run
@@ -51,4 +58,5 @@ Now app is configured!!
 2. Place the google-services.json file inside app folder
 3. Enable sign in method in firebase authentication
 4. Add products in firestore
+
 Now app is ready to run!!
