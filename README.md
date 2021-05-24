@@ -22,21 +22,12 @@ BFH/recwSrkMmJdS9y66k/2021
 https://www.loom.com/share/d4878a040b9a477bac2c0d74a89e2b2a
 
 ## How it Works ?
-1. Explaining the working of project
-
-If new user, create new account by providing emailid and password else login using the registered emailid and password.
-
-Select any products, you can add to saved/cart.
-
-From cart place order, pop up with order successful message and total will be shown.
-
-Search products by their color or type in the Search tab.
-
-Saved tab shows all the saved products.
-
-Logout by tapping logout icon.
-
-## Embed video of project demo
+1. If new user, create new account by providing emailid and password else login using the registered emailid and password.
+2. Select any products, you can add to saved/cart.
+3. From cart place order, pop up with order successful message and total will be shown.
+4. Search products by their color or type in the Search tab.
+5. Saved tab shows all the saved products.
+6. Logout by tapping logout icon.
 
 https://www.loom.com/embed/a1958eee46964c0cab076e68f793c256
 
